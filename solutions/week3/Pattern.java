@@ -25,7 +25,7 @@ public class Pattern {
 		if (isValid(pattern)) {
 			return new Pattern(pattern);
 		} else {
-			throw new InvalidPatternException(pattern);
+			return null;
 		}
 	}
 	// see the bottom of the class for example code
@@ -50,8 +50,14 @@ public class Pattern {
 	// determine equality of two patterns to work out if a given pattern
 	// is valid.
 	public boolean equals(Pattern other) {
-		// We've implemented our pattern to have
+		// We define Pattern equality in terms of the equality of the
+		// underlying strings; clients don't know that, though (unless
+		// we document it, which might be a bad idea).
+		// We might decide tomorrow to store the patterns as a matrix
+		// and clients would be none the wiser.
 		return pattern.equals(other.pattern);
+		// We can access other's private pattern field because
+		// it's the same class as us.
 	}
 	// we could call our method to determine equality "equalTo" but the
 	// "equals" method is standard in Java and is defined by Object (Pattern's
