@@ -65,7 +65,7 @@ public class Pattern {
 
 	/* Example code:
 
-	String patternCode = getInput();
+	String patternCode = "3DDLU";
 	if (Pattern.isValid(patternCode)) {
 		Pattern p = Pattern.fromString(patternCode);
 		if (p.equals(this.pattern)) {
