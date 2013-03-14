@@ -16,7 +16,17 @@ public class Pattern {
 	// this method twice, we have the liberty of only creating one object and
 	// returning it both times (which is fine, because it's immutable).
 	public static Pattern fromString(String pattern) {
-		return new Pattern(pattern);
+		// In this implementation, we're just delegating to the
+		// constructor anyway, so nothing is effectively different.
+		// We'll still be allocating new memory every time fromString is
+		// called. However, the important point is that it can be changed
+		// later. We can change our implementation of how our Patterns are
+		// created and client code won't break; clients won't even know!
+		if (isValid(pattern)) {
+			return new Pattern(pattern);
+		} else {
+			throw new InvalidPatternException(pattern);
+		}
 	}
 	// see the bottom of the class for example code
 
