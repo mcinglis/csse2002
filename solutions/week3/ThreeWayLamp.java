@@ -106,7 +106,7 @@ public class ThreeWayLamp {
 
 	// Exercise: implement "cycleState" and "cycleColor" methods that 
 	// set the state or color to the next successive value, so:
-	// OFF -> LOW -> MEDIUM -> HIGH,
-	// and WHITE -> RED -> GREEN -> BLUE.
+	// OFF -> LOW -> MEDIUM -> HIGH -> OFF,
+	// and WHITE -> RED -> GREEN -> BLUE -> WHITE,
 
 }
