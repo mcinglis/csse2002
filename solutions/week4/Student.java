@@ -6,19 +6,23 @@ public class Student {
 
 	/*
 	 * This is what the book wants you to write, but this code shouldn't be
-	 * acceptable for professional development.
+	 * acceptable for professional development. "Magic values" (see
+	 * EmployeeTest) should be eliminated where possible: here, we have magic
+	 * values like "4" or "1250".
 	 */
-	public int pay() {
-		if (0 <= creditHours && creditHours < 4) {
-			return 500;
-		} else if (4 <= creditHours && creditHours < 7) {
-			return 750;
-		} else if (7 <= creditHours && creditHours < 10) {
-			return 1000;
-		} else if (10 <= creditHours) {
-			return 1250;
+
+	public int fees() {
+		int fees;
+		if (creditHours < 4) {
+			fees = 500;
+		} else if (creditHours < 7) {
+			fees = 750;
+		} else if (creditHours < 10) {
+			fees = 1000;
 		} else {
-			return 0;
+			fees = 1250;
 		}
+		return fees;
 	}
+
 }
