@@ -1,5 +1,5 @@
-# CSSE2002: Programming in the Large
+# CSSE2002 Solutions
 
-These files should be served at http://minglis.id.au/csse2002/
+[CSSE2002](http://www.uq.edu.au/study/course.html?course_code=CSSE2002) is a course taught at [UQ](https://uq.edu.au). It teaches Java programming, object-oriented abstraction, introductory testing, etc. It's required for most software-ish degrees at UQ.
 
-The website collates my teaching materials for "Programming in the Large" being taught at the University of Queensland in 2013.
+During semester, I'll regularly update my website with resources for the course: http://minglis.id.au/csse2002
