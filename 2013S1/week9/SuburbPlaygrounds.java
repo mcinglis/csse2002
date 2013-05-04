@@ -11,18 +11,18 @@ public class SuburbPlaygrounds {
 
 	/** Prints all the playgrounds in the suburb specified by `args[0]`. */
 	public static void main(String[] args) throws IOException {
-		final String suburb = args[0].toLowerCase();
+		String suburb = args[0];
 		Scanner scanner = new Scanner(Paths.get("data", "playgrounds.csv"));
 		// skip header row
 		scanner.nextLine();
 		while (scanner.hasNextLine()) {
 			String[] row = scanner.nextLine().split(",");
-			String name = row[6];
-			String thisSuburb = row[4].toLowerCase();
-			double latitude = Double.parseDouble(row[8]);
-			if (thisSuburb.equals(suburb)) {
-				System.out.println(name);
-				System.out.println(latitude);
+			String playgroundSuburb = row[4];
+			String playgroundName = row[6];
+			double playgroundLatitude = Double.parseDouble(row[8]);
+			if (playgroundSuburb.equalsIgnoreCase(suburb)) {
+				System.out.println(playgroundName);
+				System.out.println(playgroundLatitude);
 			}
 		}
 		scanner.close();
